@@ -1,0 +1,2 @@
+Se considero que el campo de imagen, si bien almacena un texto, en la pantalla se debe poner una URL para que pueda levantar la imagen, 
+es por eso que en el Model al hacer el Insert dice img como nombre de columna pero el value dice url
