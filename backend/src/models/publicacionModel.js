@@ -7,10 +7,10 @@ export const leePublicacionModel = async () => {
   return response.rows
 }
 
-export const creaPublicacionModel = async (titulo, img, descripcion, likes) => {
+export const creaPublicacionModel = async (titulo, url, descripcion, likes) => {
   const sqlQuery = {
     text: 'INSERT INTO posts (titulo, img, descripcion, likes) values ($1, $2, $3, $4) RETURNING *',
-    values: [titulo, img, descripcion, likes]
+    values: [titulo, url, descripcion, likes]
   }
   const result = await pool.query(sqlQuery)
   console.log('Post agregado', result)
